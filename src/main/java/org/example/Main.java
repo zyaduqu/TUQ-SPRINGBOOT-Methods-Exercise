@@ -8,7 +8,7 @@ public class Main {
     public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 
-//        smallest();
+        smallest();
 //          System.out.println(numStatus(0)); //zero
 //          System.out.println(numStatus(10)); //positive
 //          System.out.println(numStatus(-10)); //negative
@@ -20,7 +20,7 @@ public class Main {
     public static void smallest(){
         System.out.println("\nquestion 1\n");
         double[] nums = new double[3];
-        double min = 0;
+
 
         //inputting the values
         for (int i = 0; i < 3; i++) {
@@ -28,13 +28,11 @@ public class Main {
             nums[i]=scanner.nextInt();
         }
 
-        double firstIndex = nums[0];
+        double min = nums[0];
 
         //checking
-        for (int i = 0; i <nums.length ; i++) {
-            if (firstIndex < nums[i]) {
-                min = firstIndex;
-            } else {
+        for (int i = 0; i <= nums.length-1 ; i++) {
+            if (nums[i]< min) {
                 min = nums[i];
             }
         }
